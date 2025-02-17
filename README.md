@@ -7,9 +7,7 @@ Install Packages:
 ```bash
 pip install -r requirements.txt
 ```
-
 Install library:
-
 ```bash
 pip install git+https://github.com/alfafa-zaki/law-doc-extractor.git
 ```
