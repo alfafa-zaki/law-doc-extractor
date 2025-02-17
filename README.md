@@ -66,7 +66,7 @@ Alternatively, create a config.json file in the root directory:
 ```
 ### Step 2: Use the Library
 ```python
-from pdf_processor import PDFProcessor
+from LawDocExtractor import PDFProcessor
 import json
 
 # Path to your PDF file
@@ -80,4 +80,20 @@ final_structure = processor.process(include_ayat=False)
 
 # Print the result
 print(json.dumps(final_structure.model_dump(), indent=2, ensure_ascii=False))
+```
+
+## Output Example
+```json
+{
+  "JUDUL": "PERATURAN PRESIDEN REPUBLIK INDONESIA...",
+  "MENIMBANG": "bahwa dalam rangka...",
+  "MENGINGAT": "Undang-Undang Nomor 12 Tahun 2024...",
+  "BATANG_TUBUH": {
+    "BAB I KETENTUAN UMUM": {
+      "Pasal 1": "Dalam Peraturan Presiden ini yang dimaksud dengan..."
+    }
+  },
+  "PENUTUP": "Peraturan Presiden ini mulai berlaku pada tanggal...",
+  "PENGESAHAN": "Ditetapkan di Jakarta pada tanggal..."
+}
 ```
