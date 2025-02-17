@@ -4,7 +4,7 @@ A Python library to process and extract structured data from Law PDF Documents (
 
 ## Installation
 
-You can install the library directly from GitHub:
+Install the library:
 
 ```bash
 pip install git+https://github.com/alfafa-zaki/law-doc-extractor.git
