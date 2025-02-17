@@ -26,4 +26,17 @@ Before using this library, install Poppler and Tesseract on your system.
    - Extract the zip file and note the path to the bin folder (e.g., C:\path\to\poppler\bin).
 
 2. Install Tesseract (required for OCR - Optical Character Recognition)
-   
+   #### On Ubuntu/Debian:
+   ```bash
+   sudo apt-get install tesseract-ocr
+   ```
+   #### On macOS:
+   ```bash
+   brew install tesseract
+   ```
+   #### On Windows
+   - Download the Tesseract installer from this link: https://github.com/UB-Mannheim/tesseract/wiki
+   - Run the installer and note the installation path (e.g., C:\Program Files\Tesseract-OCR).
+
+## Usage
+#### Step 1: Set Environment Variables
