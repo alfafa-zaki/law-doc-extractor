@@ -15,41 +15,41 @@ pip install git+https://github.com/alfafa-zaki/law-doc-extractor.git
 ## Prerequisites
 Before using this library, install Poppler and Tesseract on your system.
 1. Install Poppler (required to convert PDF pages to images)
-   #### On Ubuntu/Debian:
+   ##### On Ubuntu/Debian:
    ```bash
    sudo apt-get install poppler-utils
    ```
-   On macOS:
+   ##### On macOS:
    ```bash
    brew install poppler
    ```
-   On Windows
+   ##### On Windows
    - Download Poppler from this link: https://github.com/oschwartz10612/poppler-windows
    - Extract the zip file and note the path to the bin folder (e.g., C:\path\to\poppler\bin).
 
 3. Install Tesseract (required for OCR - Optical Character Recognition)
-   On Ubuntu/Debian:
+   ##### On Ubuntu/Debian:
    ```bash
    sudo apt-get install tesseract-ocr
    ```
-   On macOS:
+   ##### On macOS:
    ```bash
    brew install tesseract
    ```
-   On Windows
+   ##### On Windows
    - Download the Tesseract installer from this link: https://github.com/UB-Mannheim/tesseract/wiki
    - Run the installer and note the installation path (e.g., C:\Program Files\Tesseract-OCR).
 
 ## Usage
 ### Step 1: Set Environment Variables
 Set the paths to Poppler and Tesseract in environment variables.
-On Ubuntu/macOS:
+##### On Ubuntu/macOS:
 Add the following lines to .bashrc, .zshrc, or .bash_profile:
 ```bash
 export POPPLER_PATH="/path/to/poppler/bin"
 export TESSERACT_CMD="/path/to/tesseract"
 ```
-On Windows
+##### On Windows
 Open Command Prompt and run:
 ```cmd
 set POPPLER_PATH=C:\path\to\poppler\bin
