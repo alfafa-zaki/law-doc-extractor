@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="LawDocExtractor",
+    name="law-doc-extractor",  # Use a hyphen or underscore convention (lowercase)
     version="0.1.0",
     author="Alfafa Zaki",
     author_email="alfafa26zaki@gmail.com",
@@ -12,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/alfafa-zaki/law-doc-extractor",
-    packages=find_packages(include=["LawDocExtractor", "LawDocExtractor.*"]),
+    packages=find_packages(),  #  No need to include or specify if at the root
     install_requires=[
         "pypdf>=3.0.0",
         "pytesseract>=0.3.10",
