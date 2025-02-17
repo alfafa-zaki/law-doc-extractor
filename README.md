@@ -21,6 +21,9 @@ Before using this library, install Poppler and Tesseract on your system.
    ```bash
    brew install poppler
    ```
+   #### On Windows
+   - Download Poppler from this link: https://github.com/oschwartz10612/poppler-windows
+   - Extract the zip file and note the path to the bin folder (e.g., C:\path\to\poppler\bin).
 
 3. 
    
