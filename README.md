@@ -15,7 +15,7 @@ pip install git+https://github.com/alfafa-zaki/law-doc-extractor.git
 ## Prerequisites
 Before using this library, install Poppler and Tesseract on your system.
 1. Install Poppler (required to convert PDF pages to images)
-   ##### On Ubuntu/Debian:
+   #### On Ubuntu/Debian:
    ```bash
    sudo apt-get install poppler-utils
    ```
