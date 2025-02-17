@@ -12,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/alfafa-zaki/law-doc-extractor",
-    packages=find_packages(),
+    packages=find_packages(include=["LawDocExtractor", "LawDocExtractor.*"]),
     install_requires=[
         "pypdf>=3.0.0",
         "pytesseract>=0.3.10",
