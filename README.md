@@ -43,4 +43,41 @@ Before using this library, install Poppler and Tesseract on your system.
    - Run the installer and note the installation path (e.g., C:\Program Files\Tesseract-OCR).
 
 ## Usage
-#### Step 1: Set Environment Variables
+### Step 1: Set Environment Variables
+Set the paths to Poppler and Tesseract in environment variables.
+#### On Ubuntu/macOS:
+Add the following lines to .bashrc, .zshrc, or .bash_profile:
+```bash
+export POPPLER_PATH="/path/to/poppler/bin"
+export TESSERACT_CMD="/path/to/tesseract"
+```
+#### On Windows
+Open Command Prompt and run:
+```cmd
+set POPPLER_PATH=C:\path\to\poppler\bin
+set TESSERACT_CMD=C:\Program Files\Tesseract-OCR\tesseract.exe
+```
+Alternatively, create a config.json file in the root directory:
+```json
+{
+  "POPPLER_PATH": "/path/to/poppler/bin",
+  "TESSERACT_CMD": "/path/to/tesseract"
+}
+```
+### Step 2: Use the Library
+```python
+from pdf_processor import PDFProcessor
+import json
+
+# Path to your PDF file
+pdf_path = "path/to/your/pdf.pdf"
+
+# Initialize the processor
+processor = PDFProcessor(pdf_path)
+
+# Process the PDF (True: Include Ayat | False: Exclude Ayat)
+final_structure = processor.process(include_ayat=False)
+
+# Print the result
+print(json.dumps(final_structure.model_dump(), indent=2, ensure_ascii=False))
+```
