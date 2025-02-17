@@ -2,6 +2,8 @@
 
 A Python library to process and extract structured data from Law PDF Documents (Peraturan Presiden Republik Indonesia). This library is designed to extract text, identify sections, and structure (BAB, Ayat, Pasal) the content of law PDF documents, especially legal or regulatory documents.
 
+![Alt text](page1_perpres-no-161-tahun-2024.png)
+
 ## Installation
 Install Packages:
 ```bash
