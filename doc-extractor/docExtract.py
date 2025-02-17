@@ -9,18 +9,20 @@ from pydantic import BaseModel
 from pdf2image import convert_from_path
 from typing import Dict, List, Optional, Union
 
-# Constants
-POPPLER_PATH = r"D:\2025\RAG\poppler-24.08.0\Library\bin"
-TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-SK_PATTERN = r'SK No\s?\d+[A-Z]?'
-TITLE_PATTERN = r"PERATURAN PRESIDEN REPUBLIK INDONESIA"
-MENIMBANG_PATTERN = r"bahwa"
-BAB_PATTERN = r"(BAB [IVXLCDM]+\s+[A-Z ]+)\n"
-PASAL_PATTERN = r"\n(Pasal \d+)\n"
-AYAT_PATTERN = r"\(\s*\d+\s*\)"
-CLOSING_PATTERN = r"KETENTUAN PENUTUP"
-LEGITIMATION_PATTERN = r"Ditetapkan di"
-MENGINGAT_PATTERN = r"Mengingat\s*:(.*?)(?=Menetapkan|MEMUTUSKAN|$)"
+# Import constants
+from .constants import (
+    POPPLER_PATH,
+    TESSERACT_CMD,
+    SK_PATTERN,
+    TITLE_PATTERN,
+    MENIMBANG_PATTERN,
+    BAB_PATTERN,
+    PASAL_PATTERN,
+    AYAT_PATTERN,
+    CLOSING_PATTERN,
+    LEGITIMATION_PATTERN,
+    MENGINGAT_PATTERN,
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -237,10 +239,10 @@ class PDFProcessor:
             raise
 
 # Example usage
-if __name__ == "__main__":
-    pdf_path = "documents/perpres/perpres-no-161-tahun-2024.pdf"
-    processor = PDFProcessor(pdf_path)
+# if __name__ == "__main__":
+#     pdf_path = "documents/perpres/perpres-no-161-tahun-2024.pdf"
+#     processor = PDFProcessor(pdf_path)
 
-    # Option: include_ayat=True to extract down to ayat level
-    final_structure = processor.process(include_ayat=False)
-    print(json.dumps(final_structure.model_dump(), indent=2, ensure_ascii=False))
+#     # Option: include_ayat=True to extract down to ayat level
+#     final_structure = processor.process(include_ayat=False)
+#     print(json.dumps(final_structure.model_dump(), indent=2, ensure_ascii=False))
