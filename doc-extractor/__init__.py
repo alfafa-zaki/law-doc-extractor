@@ -1,6 +1,6 @@
-# pdf_processor/__init__.py
+# doc-extractor/__init__.py
 
-from .processor import PDFProcessor, PDFStructure
+from .docExtract import PDFProcessor, PDFStructure
 from .constants import (
     POPPLER_PATH,
     TESSERACT_CMD,
